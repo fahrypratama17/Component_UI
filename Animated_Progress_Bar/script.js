@@ -9,7 +9,7 @@ const interval = setInterval(() => {
         progress += 1;
         const offset = 339.292 - (339.292 * progress) / 100;
         progressCircle.style.strokeDashoffset = offset;
-        percentageText.textContent = `${progress}`;
+        percentageText.textContent = `${progress}%`;
     } else {
         clearInterval(interval);
         statusText.textContent = 'Download Completed'

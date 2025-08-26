@@ -38,8 +38,8 @@ body {
 
 .circle-progress {
     stroke: #4ecdc4;
-    stroke-dasharray: 339, 292;
-    stroke-dashoffset: 339, 292;
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
     transition: stroke-dashoffset 0.5s ease;
 }
 
