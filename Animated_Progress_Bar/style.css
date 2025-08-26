@@ -1,0 +1,63 @@
+body {
+    font-family: 'roboto';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #010101;
+}
+
+/* Container for the download bar */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Circular Progress Container */
+.progress-bar {
+    position: relative;
+    width: 120px; height: 120px;
+}
+
+/* SVG circle styling */
+.circle {
+    transform: rotate(-90deg);
+}
+
+.circle-background, .circle-progress {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.circle-background {
+    stroke: #eee;
+}
+
+.circle-progress {
+    stroke: #4ecdc4;
+    stroke-dasharray: 339, 292;
+    stroke-dashoffset: 339, 292;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+/* Percetage Text */
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #eee;
+}
+
+/* Status Text */
+.status {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #eee;
+}
