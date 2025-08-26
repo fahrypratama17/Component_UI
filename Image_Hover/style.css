@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a5b1c2;
+    font-family: "Arial", sans-serif;
+}
+
+.image-container {
+    position: relative;
+    width: 300px; height:400px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #fed330;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.image-container img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.7), rgba(0, 100, 255, 0.7));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(20px);
+}
+
+.image-overlay h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.image-overlay p {
+    font-size: 16px;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Hover Effect */
+.image-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-container:hover .image-overlay h1 {
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.image-container:hover .image-overlay p {
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+/* Shine Effect */
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
+    transform: slewX(-25deg);
+    transition: all 0.6s ease;
+}
+
+.image-container:hover::after {
+    left: 150%;
+}
