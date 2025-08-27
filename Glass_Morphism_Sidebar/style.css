@@ -50,16 +50,13 @@ body {
     transform: translateX(10px);
 }
 
-.nav-item i {
-    font-size: 1.5rem;
-    margin-right: 20px;
-}
-
 .nav-item svg {
     color: #fff;
     width: 25px; height: 25px;
     display: inline-block;
     vertical-align: middle;
+    font-size: 1.5rem;
+    margin-right: 20px;
 }
 
 .nav-item span {
