@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Login</title>
+</head>
+<body>
+    <div class="card">
+        <div class="login-form">
+            <h1>Login</h1>
+            <form action="">
+                <div class="user-input">
+                    <input type="text" class="user" required>
+                    <i data-lucide="user"></i>
+                    <label for="">Username</label>
+                </div>
+            </form>
+
+            <form action="">
+                <div class="user-input">
+                    <input type="password" class="user" required>
+                    <i data-lucide="lock-keyhole"></i>
+                    <label for="">Password</label>
+                </div>
+
+            <div class="remember-fogot">
+                <input type="checkbox" > Remeber Me
+                <a href="#" class="forget"> Forget password?</a>
+            </div>
+
+            <button class="send">Login</button>
+
+            <div class="register">Don't have an account?
+                <a href="#">Register</a>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
