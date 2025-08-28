@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'space grotesk';
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), 50%, rgba(0, 0, 0 , 0.1)50%), url(background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-container {
+    position: fixed;
+    left: 0;
+    width: 100%; height: 80px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.nav-container:hover {
+    top: 0;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    transition: all 0.3s ease 0.2s;
+}
+
+.nav-container:hover .nav-links a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0; height: 2px;
+    background: #00ff88;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover{
+    color: #00ff88;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    color: #00ff88;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease 0.1s;
+}
+
+.nav-container:hover .logo {
+    opacity:1;
+    transform: translateY(0);
+}
