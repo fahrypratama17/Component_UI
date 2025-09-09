@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Modern Dropdown</title>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropdown-toggle menu-item">
+            <span class="item-icon">
+                <svg data-lucide="User"></svg>
+            </span>
+            <span class="item-txt">Profile</span>
+        </button>
+    
+        <ul class="dropdown-menu">
+            <li class="menu-item">
+                <span class="item-icon">
+                    <svg data-lucide="layout-dashboard"></svg>
+                </span>
+                <span class="item-txt">Dashboard</span>
+            </li>
+
+            <li class="menu-item">
+                <span class="item-icon">
+                    <svg data-lucide="Settings"></svg>
+                </span>
+                <span class="item-txt">Setting</span>
+            </li>
+
+            <li class="menu-item">
+                <span class="item-icon">
+                    <svg data-lucide="log-out"></svg>
+                </span>
+                <span class="item-txt">Log Out</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
