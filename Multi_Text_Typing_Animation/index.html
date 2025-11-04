@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Auto Typing Effect | HTML, CSS, JS</title>
+</head>
+<body>
+    <div class="wrapper">
+        <span>Hi, I'm <span class="multiText">Coder</span></span>
+    </div>
+</body>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    const typingEffect = new Typed(".multiText", {
+        strings : ["Coder", "Designer", "Programmer", "Alive"],
+        loop : true,
+        typeSpeed : 100,
+    })
+</script>
+</html>
