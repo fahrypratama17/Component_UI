@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #0c1b23;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    top: 50px;
+}
+
+.layer {
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    background: #F4F4F4;
+    transform: rotateX(60deg) rotateY(15deg) rotateZ(-80deg) skew(20deg, 20deg);
+    transition: .45s ease;
+}
+
+.card:hover .layer{
+    background: #348cff;
+    transform: rotateX(60deg) rotateY(15deg) rotateZ(-80deg) skew(20deg, 20deg) translateX(-50px) translateZ(calc(var(--i) * 70px));
+    opacity: calc(var(--i) * 0.33);
+}
