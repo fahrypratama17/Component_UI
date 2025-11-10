@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at center, #000010 0%, #000000 100%);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.galaxy {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #fffdd0, #ff9900);
+    border-radius: 50%;
+    box-shadow: 0 0 80px #ffaa00, 0 0 30px #ffcc00;
+    transform: translate(-50%, -50%);
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 6px white;
+    opacity: 0.8;
+}
