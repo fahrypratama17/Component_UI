@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Groteks';
+}
+
+.menu-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: #3f19a8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 28px;
+    transform: translate(-50%, -50%);
+    transition: tranform 0.3s ease;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.menu-toggle.rotate {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.menu-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #00b894;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    transform: translate(-50%, -50%) rotate(0deg) translate(0);
+    transition: 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00b894aa;
+}
+
+.menu-item:hover {
+    scale: 1.1;
+}
+
+.menu-container.open .menu-item {
+    transform: translate(-50%, -50%) rotate(calc(60deg * var(--i))) translate(100px) rotate(calc(-60deg * var(--i)));
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-item:hover {
+    background-color: #01cfa3;
+    transform: scale(1.1) translate(-50%, -50%) rotate(calc(60deg * var(--i))) translate(100px) rotate(calc(-60deg * var(--i)));
+}
