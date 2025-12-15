@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-image: url("background.jpg");
+    background-clip: text;
+    background-size: 300% 300%;
+    color: transparent;
+    animation: animate 8s ease infinite;
+    font-size: 200px;
+}
+
+ @keyframes animate {
+     0% {
+         background-position: 0%;
+     }
+
+     50% {
+         background-position: 100%;
+     }
+
+     100% {
+        background-position: 0%;
+     }
+ }
