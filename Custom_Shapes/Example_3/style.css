@@ -36,6 +36,58 @@ body {
     border-radius: 15px;
 }
 
+.card .box:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 106px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    z-index: 10;
+    border-bottom-left-radius: 20px;
+    box-shadow: -6px 6px var(--clr);
+}
+
+.card .box:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 105px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    z-index: 10;
+    border-bottom-left-radius: 20px;
+    box-shadow: -6px 6px var(--clr);
+}
+
+.card .box:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    bottom: 106px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    z-index: 10;
+    border-top-left-radius: 20px;
+    box-shadow: -6px -6px var(--clr);
+}
+
+.card .box:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 109px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    z-index: 10;
+    border-top-left-radius: 20px;
+    box-shadow: -6px -6px var(--clr);
+}
+
 .card .box:nth-child(2) {
     background: #fff;
     height: 220px;
