@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #fff;
+    color: #000;
+    --color1: #fa1eb1;
+    --color2: #4706eb;
+    --color3: #a2f4a2;
+    --color4: #ff7f50;
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    height: 90vh;
+    align-items: center;
+}
+
+.container {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    background-color: var(--color2);
+    border-radius: 24px;
+    background-image: url("https://cdn.britannica.com/10/250610-050-BC5CCDAF/Zebra-finch-Taeniopygia-guttata-bird.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.m {
+    position: absolute;
+    height: 50px;
+    background-color: #000;
+    width: 10%;
+    bottom: 0;
+    right: 0;
+    border-radius: 24px;
+    outline: 10px solid #fff;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+.m::before, .m::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    aspect-ratio: 1;
+    background: radial-gradient(circle 24px at top left, #0000 98%, #fff);
+}
+
+.m::before {
+    left: -34px;
+    bottom: 0;
+    top: 26px;
+    width: 34px;
+}
+
+.m::after {
+    top: -34px;
+    right: -10px;
+    width: 34px;
+}
+
+.m:hover {
+    width: 60%;
+}
+
+.m:hover span {
+    width: 100%;
+}
+
+span {
+    display: grid;
+    color: #fff;
+    place-items: center;
+    overflow: hidden;
+    width: 1.5ch;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
