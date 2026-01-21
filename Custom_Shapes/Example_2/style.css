@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@300..700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f3e9dc;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.card {
+    position: relative;
+    height: 200px;
+    width: 150px;
+    background: rgba(0, 0, 0, 0.45);
+    clip-path: path("M 10,20 L 60,20 A 10,10 0,0,0 70,10 L 70,10 A 10,10 0,0,1 80,0 L 140,0 A 10,10 0,0,1 150,10 L 150,190 A 10,10 0,0,1 140,200 L 10,200 A 10,10 0,0,1 0,190 L 0,30 A 10,10 0,0,1 10,20 Z");
+    overflow: hidden;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
